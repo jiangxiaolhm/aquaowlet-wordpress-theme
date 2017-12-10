@@ -8,15 +8,15 @@ Version: 1.0
 */
 
 html {
+    /*overflow-y: scroll;*/
     padding: 0;
     margin: 0;
 }
 
 body {
-    padding: 0;
+    padding-left: calc(100vw - 100%);
     margin: 0;
     font-family: Arial, sans-serif;
-    font-size: 100%;
     color: #333;
 }
 
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General Layout */
 div.container {
-    max-width: 80vw;
+    width: 1080px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -46,7 +46,7 @@ div.container {
 /* Content Area */
 article.post {
     border-bottom: 2px dotted #bbb;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 article.post:last-of-type {
@@ -164,6 +164,7 @@ div.info-box p {
 
 /* Children Links */
 .children-links {
+    margin-top: -10px;
     margin-bottom: 20px;
     font-size: 90%;
 }
@@ -203,4 +204,65 @@ div.info-box p {
     border-bottom: 1px solid #ddd;
     color: #333;
     cursor: default;
+}
+
+/* Post Styles */
+.post h2 {
+    margin-bottom: 0;
+}
+
+p.post-info {
+    font-size: 90%;
+    color: #999;
+}
+
+p.post-info a:link,
+p.post-info a:visited {
+    color: #999;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.has-thumbnail {
+    position: relative;
+    min-height: 120px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+
+.post-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+article.has-banner-image {
+    margin-top: -20px;
+}
+
+/* Search */
+div.hd-search {
+    float: right;
+}
+
+div.hd-search label {
+    position: absolute;
+    left: -9999px;
+}
+
+div.hd-search #searchsubmit {
+    background-color: #74b6ce;
+    color: #fff;
+    padding: 4px 12px;
+    border: none;
+    vertical-align: top;
+}
+
+div.hd-search #s {
+    vertical-align: top;
+    padding: 2px 0;
 }
