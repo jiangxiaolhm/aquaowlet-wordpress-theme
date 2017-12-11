@@ -240,8 +240,9 @@ img {
     left: 0;
 }
 
-article.has-banner-image {
+.banner-image {
     margin-top: -20px;
+    margin-bottom: -20px;
 }
 
 /* Search */
