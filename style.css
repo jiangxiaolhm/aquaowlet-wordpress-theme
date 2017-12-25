@@ -8,7 +8,6 @@ Version: 1.0
 */
 
 html {
-    /*overflow-y: scroll;*/
     padding: 0;
     margin: 0;
 }
@@ -31,7 +30,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em 0;
     font-weight: normal;
 }
 
@@ -45,12 +44,54 @@ div.container {
 
 /* Content Area */
 article.post {
-    border-bottom: 2px dotted #bbb;
+    border-bottom: 2px solid #bbb;
     margin-top: 20px;
 }
 
 article.post:last-of-type {
     border-bottom: none;
+}
+
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+    font-size: 125%;
+    background-color: #E5F2B1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+}
+
+.mini-meta {
+    font-size: 70%;
+    margin: 0;
+    color: #777;
+}
+
+/* Link Post Format Styles */
+article.post-link {
+    padding: 0;
+    background-color: #e0ebff;
+ }
+
+article.post-link a {
+    display: block;
+    padding: 20px;
+}
+
+/* Post Format Gallery Styles */
+article.post-gallery {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+article.post-gallery img {
+    border: none!important;
+}
+
+article.post-gallery h2 {
+    text-align: center;
 }
 
 /* Header */
@@ -62,8 +103,9 @@ article.post:last-of-type {
 
 /* Footer */
 .site-footer {
-    margin-top: 30px;
+    margin-top: 20px;
     border-top: 2px solid #999;
+    padding-top: 10px;
 }
 
 /* Navigation Menus */
@@ -103,6 +145,26 @@ article.post:last-of-type {
     color: #ffffff;
 }
 
+/* Main Column */
+.main-column {
+    width: 66%;
+    float: left;
+}
+
+/* Side Column */
+.secondary-column {
+    width: 30%;
+    float: right;
+}
+
+/* Footer Widget Area */
+.footer-widget-area {
+    width: 25%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
 /* Footer Menu */
 .site-footer nav ul li {
     margin-right: 10px;
@@ -115,6 +177,10 @@ article.post:last-of-type {
 }
 
 /* Page Layout */
+article.page {
+    min-height: 50vh;
+}
+
 article.page h2 {
     font-size: 250%;
     margin-bottom: 15px;
@@ -141,6 +207,7 @@ div.title-column {
 }
 
 div.text-column {
+    word-wrap: break-word;
     width: 70%;
     float: right;
 }
@@ -266,4 +333,8 @@ div.hd-search #searchsubmit {
 div.hd-search #s {
     vertical-align: top;
     padding: 2px 0;
+}
+
+.site-content {
+    min-height: 50vh;
 }

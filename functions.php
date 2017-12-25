@@ -56,6 +56,52 @@ function aquaowlet_setup() {
     add_theme_support('post-thumbnails');
     add_image_size('small-thumbnail', 180, 120, true);
     add_image_size('banner-image', 1080, 270, array('center', 'center'));
+    
+    // Add post format support
+    add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 }
 
 add_action('after_setup_theme', 'aquaowlet_setup');
+
+
+// Add Widget Location
+function aquaowlet_widgets_init() {
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar1',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>'
+    ));
+    
+    register_sidebar(array(
+        'name' => 'Footer Area 1',
+        'id' => 'footer1',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>'
+    ));
+    
+    register_sidebar(array(
+        'name' => 'Footer Area 2',
+        'id' => 'footer2',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>'
+    ));
+    
+    register_sidebar(array(
+        'name' => 'Footer Area 3',
+        'id' => 'footer3',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>'
+    ));
+    
+    register_sidebar(array(
+        'name' => 'Footer Area 4',
+        'id' => 'footer4',
+        'before_widget' => '<div class="widget-item">',
+        'after_widget' => '</div>'
+    ));
+}
+
+add_action('widgets_init', 'aquaowlet_widgets_init');
